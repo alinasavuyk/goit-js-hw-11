@@ -14,15 +14,27 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <form class="search-form" id="search-form">
-      <input
-        type="text"
-        name="searchQuery"
-        autocomplete="off"
-        placeholder="Search images..."
-      />
-      <button type="submit">Search</button>
-    </form>
+    <header>
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <main>
+      <div class="gallery" data-infinite-scroll='{ "path": ".pagination__next", "append": ".post", "history": false }'>
+  
+        <!-- Карточки изображений -->
+      </div>
+    </main>
+    
+    <button type="button" class="load-more">Load more</button>
     <script src="./index.js"></script>
+    <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+  
   </body>
 </html>
