@@ -33,7 +33,7 @@ function onSearch (e)  {
   
     buttonMore.classList.add('is-hidden');
     cardList.insertAdjacentHTML('beforeend', cardElem(data.hits))
-   
+    displayedHits += data.hits.length;
     Notify.success(`Hooray! We found ${data.totalHits} images.`)
     lightboxGallery()
 
@@ -42,7 +42,7 @@ function onSearch (e)  {
       buttonMore.classList.remove('is-hidden');
       return error()
      }
-     displayedHits += data.hits.length;
+     
     if (data.totalHits < per_page || displayedHits === data.totalHits) {
        Notify.warning('We are sorry, but you have reached the end of search results.');
        buttonMore.classList.remove('is-hidden');
