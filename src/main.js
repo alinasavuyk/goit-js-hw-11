@@ -34,6 +34,9 @@ return
       createGallery(data);
     })
     .catch(error => {
+      iziToast.error({
+    title: 'Warning',
+    message: 'Sorry, there are no images matching your search query. Please try again!'})
       console.error(error);
     })
     .finally(() => {
