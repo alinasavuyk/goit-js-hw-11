@@ -6,7 +6,7 @@ let lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
-export async function createGallery(images) {
+export function createGallery(images) {
 
 const galleryItem = images.map(({webformatURL,largeImageURL, tags, likes,views, comments, downloads})=>{
 return `<li class = "gallery-item">
